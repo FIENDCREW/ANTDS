@@ -1,0 +1,31 @@
+@import '../../assets/scss/normalize.scss';
+.main_layout {
+  min-height: 100vh;
+  &__sider_menu {
+    margin-top: 64px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding-left: 18px;
+  }
+  &__footer {
+    background: #fff;
+    padding-left: 18px;
+  }
+  &__content {
+    margin: 24px 16px;
+    padding: 24px;
+    background-color: #fff;
+  }
+}
+
+.sider_toggle {
+  padding: 0 24px;
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
