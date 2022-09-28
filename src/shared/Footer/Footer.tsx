@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import style from './Footer.module.scss';
 import childrenConfig from './childrenConfig';
 import teenagerConfig from './teenagerConfig';
+import forAdultsConfig from './ForAdultsConfig';
+import infoConfig from './infoConfig';
 
 const Footer = () => {
   const { pathname } = useLocation();
@@ -52,6 +54,38 @@ const Footer = () => {
         <h3>Подросткам</h3>
         <ul>
           {teenagerConfig.map((chilItem) => {
+            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+            return (
+              <Link
+                key={chilItem.id}
+                to={chilItem.path}
+                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                <li>{chilItem.name}</li>
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
+      <div>
+        <h3>Взрослым</h3>
+        <ul>
+          {forAdultsConfig.map((chilItem) => {
+            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+            return (
+              <Link
+                key={chilItem.id}
+                to={chilItem.path}
+                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                <li>{chilItem.name}</li>
+              </Link>
+            );
+          })}
+        </ul>
+      </div>
+      <div>
+        <h3>Информация</h3>
+        <ul>
+          {infoConfig.map((chilItem) => {
             const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
             return (
               <Link
