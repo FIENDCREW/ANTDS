@@ -1,6 +1,7 @@
 @import '../../assets/scss/normalize.scss';
 .footer_main {
-  height: 560px;
+  height: 100%;
+  min-height: 560px;
   background-color: #00093c;
   display: flex;
   justify-content: space-around;
@@ -8,10 +9,24 @@
   color: #ffffff;
 }
 
+.spisok_item {
+  list-style: none;
+  &li {
+    text-decoration: none;
+  }
+}
+
 h3 {
   color: #ffffff;
 }
 
-.children_menu {
-  text-decoration: none;
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
+import SvgSelector from 'shared/Svg.Selector';
 import style from './Header.module.scss';
 
 const Header = () => {
   return (
     <div className={style.header_main}>
       <div className={style.header_img}>
-        <img src="" alt="" />
+        <SvgSelector id='logo' />
       </div>
       <div className={style.header_courses}>
         <p>Все курсы</p>

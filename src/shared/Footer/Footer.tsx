@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import SvgSelector from 'shared/Svg.Selector';
 import style from './Footer.module.scss';
 import childrenConfig from './childrenConfig';
 import teenagerConfig from './teenagerConfig';
@@ -12,7 +13,7 @@ const Footer = () => {
     <div className={style.footer_main}>
       <div>
         <div className={style.footer_img}>
-          <img src="" alt="" />
+          <SvgSelector id="logo2" />
         </div>
         <div className={style.footer_phone}>
           <p>8 800 950-33-98</p>
@@ -36,14 +37,14 @@ const Footer = () => {
       </div>
       <div className={style.children_menu}>
         <h3>Детям</h3>
-        <ul>
+        <ul className={style.spisok_item}>
           {childrenConfig.map((chilItem) => {
             const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
             return (
               <Link
                 key={chilItem.id}
                 to={chilItem.path}
-                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                className={`${isActiveClassNName} ${style.spisok_item_li}`}>
                 <li>{chilItem.name}</li>
               </Link>
             );
