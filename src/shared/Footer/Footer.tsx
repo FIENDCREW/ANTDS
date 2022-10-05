@@ -35,69 +35,71 @@ const Footer = () => {
           <p>© ХОД, Future Academy</p>
         </div>
       </div>
-      <div className={style.children_menu}>
-        <h3>Детям</h3>
-        <ul className={style.spisok_item}>
-          {childrenConfig.map((chilItem) => {
-            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
-            return (
-              <Link
-                key={chilItem.id}
-                to={chilItem.path}
-                className={`${isActiveClassNName} ${style.spisok_item_li}`}>
-                <li>{chilItem.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
-      <div>
-        <h3>Подросткам</h3>
-        <ul>
-          {teenagerConfig.map((chilItem) => {
-            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
-            return (
-              <Link
-                key={chilItem.id}
-                to={chilItem.path}
-                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
-                <li>{chilItem.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
-      <div>
-        <h3>Взрослым</h3>
-        <ul>
-          {forAdultsConfig.map((chilItem) => {
-            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
-            return (
-              <Link
-                key={chilItem.id}
-                to={chilItem.path}
-                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
-                <li>{chilItem.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
-      </div>
-      <div>
-        <h3>Информация</h3>
-        <ul>
-          {infoConfig.map((chilItem) => {
-            const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
-            return (
-              <Link
-                key={chilItem.id}
-                to={chilItem.path}
-                className={`${isActiveClassNName} ${style.chilrenFooter}`}>
-                <li>{chilItem.name}</li>
-              </Link>
-            );
-          })}
-        </ul>
+      <div className={style.footer_menu}>
+        <div className={style.children_menu}>
+          <h3>Детям</h3>
+          <ul className={style.spisok_item}>
+            {childrenConfig.map((chilItem) => {
+              const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+              return (
+                <Link
+                  key={chilItem.id}
+                  to={chilItem.path}
+                  className={`${isActiveClassNName} ${style.spisok_item_li}`}>
+                  <li>{chilItem.name}</li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
+        <div>
+          <h3>Подросткам</h3>
+          <ul>
+            {teenagerConfig.map((chilItem) => {
+              const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+              return (
+                <Link
+                  key={chilItem.id}
+                  to={chilItem.path}
+                  className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                  <li>{chilItem.name}</li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
+        <div>
+          <h3>Взрослым</h3>
+          <ul>
+            {forAdultsConfig.map((chilItem) => {
+              const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+              return (
+                <Link
+                  key={chilItem.id}
+                  to={chilItem.path}
+                  className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                  <li>{chilItem.name}</li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
+        <div>
+          <h3>Информация</h3>
+          <ul>
+            {infoConfig.map((chilItem) => {
+              const isActiveClassNName = pathname.includes(chilItem.path) ? style.active : '';
+              return (
+                <Link
+                  key={chilItem.id}
+                  to={chilItem.path}
+                  className={`${isActiveClassNName} ${style.chilrenFooter}`}>
+                  <li>{chilItem.name}</li>
+                </Link>
+              );
+            })}
+          </ul>
+        </div>
       </div>
     </div>
   );

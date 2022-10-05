@@ -6,3 +6,17 @@
   height: 110px;
   background-color: $font-primary;
 }
+.header_spisok {
+  display: flex;
+  color: #000;
+}
+
+.header_spisok_ul {
+  display: flex;
+  justify-content: space-around;
+  color: #000;
+}
+
+.header_spisok_li{
+  color: #000;
+}

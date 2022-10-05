@@ -1,11 +1,7 @@
 import React from 'react';
 
-const homeBaner = () => {
-  return (
-    <div>
-      
-    </div>
-  );
+const HomeBaner = () => {
+  return <div>IS NOT BANER 404</div>;
 };
 
-export default homeBaner;
+export default HomeBaner;
